@@ -84,8 +84,13 @@ function App() {
       <div className="app-container">
         {/* Header Card */}
         <div className="kids-card header-card header-section animate-hidden">
-          <div className="header-org">PHONG TRÀO THIẾU NHI THÁNH THỂ VIỆT NAM</div>
-          <div className="header-parish">Giáo xứ Thiên Ân - Xứ Đoàn Đức Mẹ Fatima</div>
+          <div className="header-logo-container">
+            <img src="/logo.png" alt="Logo Xứ Đoàn" className="header-logo" />
+            <div className="header-text-container">
+              <div className="header-org">PHONG TRÀO THIẾU NHI THÁNH THỂ VIỆT NAM</div>
+              <div className="header-parish">Giáo xứ Thiên Ân - Xứ Đoàn Đức Mẹ Fatima</div>
+            </div>
+          </div>
           
           <div className="title-badge">🌟 Dành cho thiếu nhi 6-13 tuổi</div>
           

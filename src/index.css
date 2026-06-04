@@ -108,6 +108,28 @@ body {
   position: relative;
 }
 
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.header-logo {
+  width: 90px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+.header-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
 .header-org {
   font-family: var(--font-heading);
   font-size: 1.1rem;
@@ -123,7 +145,7 @@ body {
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: 25px;
+  margin-bottom: 0;
 }
 
 .title-badge {
@@ -575,5 +597,17 @@ body {
   }
   .kids-card {
     padding: 20px;
+  }
+  .header-logo-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .header-text-container {
+    align-items: center;
+    text-align: center;
+  }
+  .header-logo {
+    width: 70px;
   }
 }
