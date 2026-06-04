@@ -297,13 +297,6 @@ function App() {
             </>
           ) : (
             <div className="success-container">
-              <div className="success-icon">🎉</div>
-              <div className="success-message">
-                <strong>ĐĂNG KÝ THÀNH CÔNG!</strong><br/><br/>
-                Sau khi phụ huynh đăng ký và đóng phí đi trại, xin quý phụ huynh liên hệ Zalo số điện thoại <strong>0985287664</strong> để nhận thông tin chi tiết.<br/><br/>
-                Xin cảm ơn quý phụ huynh!
-              </div>
-              
               <p style={{marginBottom: '15px', fontWeight: '700', fontSize: '1.2rem', color: 'var(--color-primary)'}}>
                 Vui lòng quét mã QR dưới đây để thanh toán:
               </p>
@@ -319,6 +312,13 @@ function App() {
                     <strong>Số tiền:</strong> <span style={{color: '#d35400', fontWeight: 'bold', fontSize: '1.2rem'}}>170.000 VNĐ</span>
                   </div>
                 </div>
+              </div>
+
+              <div className="success-icon" style={{marginTop: '20px'}}>🎉</div>
+              <div className="success-message">
+                <strong>ĐĂNG KÝ THÀNH CÔNG!</strong><br/><br/>
+                Sau khi phụ huynh đăng ký và đóng phí đi trại, xin quý phụ huynh liên hệ Zalo số điện thoại <strong>0985287664</strong> để nhận thông tin chi tiết.<br/><br/>
+                Xin cảm ơn quý phụ huynh!
               </div>
             </div>
           )}
