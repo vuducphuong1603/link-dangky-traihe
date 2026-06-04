@@ -1,6 +1,24 @@
-import { useState, type FormEvent } from 'react'
+import { useState, useEffect, type FormEvent } from 'react'
 
 function App() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll('.animate-hidden');
+    elements.forEach((el) => observer.observe(el));
+
+    return () => elements.forEach((el) => observer.unobserve(el));
+  }, []);
+
   const [formData, setFormData] = useState({
     phone: '',
     studentName: '',
@@ -65,7 +83,7 @@ function App() {
       
       <div className="app-container">
         {/* Header Card */}
-        <div className="kids-card header-card header-section">
+        <div className="kids-card header-card header-section animate-hidden">
           <div className="header-org">PHONG TRÀO THIẾU NHI THÁNH THỂ VIỆT NAM</div>
           <div className="header-parish">Giáo xứ Thiên Ân - Xứ Đoàn Đức Mẹ Fatima</div>
           
@@ -81,7 +99,7 @@ function App() {
         </div>
 
         {/* Info Card */}
-        <div className="kids-card info-card">
+        <div className="kids-card info-card animate-hidden delay-1">
           <h2 className="section-title color-green">
             <span className="title-icon">🏕️</span> Thông Tin Trại
           </h2>
@@ -139,7 +157,7 @@ function App() {
         </div>
 
         {/* Schedule Card */}
-        <div className="kids-card schedule-card">
+        <div className="kids-card schedule-card animate-hidden delay-2">
           <h2 className="section-title color-yellow">
             <span className="title-icon">⏰</span> Chương Trình Chi Tiết
           </h2>
@@ -208,7 +226,7 @@ function App() {
         </div>
 
         {/* Form / Success Card */}
-        <div className="kids-card form-card">
+        <div className="kids-card form-card animate-hidden delay-3">
           {!isSuccess ? (
             <>
               <h2 className="section-title color-primary">
