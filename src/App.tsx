@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react'
+import { useState, type FormEvent } from 'react'
 
 function App() {
   const [formData, setFormData] = useState({
@@ -41,20 +41,14 @@ function App() {
       formBody.append('studentName', formData.studentName);
       formBody.append('studentClass', formData.studentClass);
 
-      if (SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE') {
-        await fetch(SCRIPT_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          body: formBody,
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-          }
-        });
-      } else {
-        // Mocking submission if user hasn't put the URL yet
-        console.log("Mock submission:", Object.fromEntries(formBody));
-        await new Promise(r => setTimeout(r, 1000));
-      }
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formBody,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      });
 
       setIsSuccess(true);
     } catch (error) {
