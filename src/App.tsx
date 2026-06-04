@@ -286,7 +286,7 @@ function App() {
                     onChange={handleChange}
                   />
                   <label htmlFor="agree">
-                    Tôi đồng ý cho thiếu nhi tham dự trại hè này và cam kết đóng đủ kinh phí.
+                    Tôi đồng ý cho thiếu nhi tham dự trại hè này.
                   </label>
                 </div>
 
