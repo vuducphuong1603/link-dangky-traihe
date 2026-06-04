@@ -12,7 +12,7 @@ function App() {
   const [isSuccess, setIsSuccess] = useState(false);
   
   // URL to the Google Apps Script Web App
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbylRB85Mzy47GxLNLJZA-wOZtjD9EvFJ8LrMdx20KmeZteMTwtlUtggB2lppE9GQBxg/exec';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwiCkw02dhBDfeL_nyfHYLvNUzXh7dK0nq__O7oo2VBdSkYLIyrNGlxQWhnPX7UFrXs/exec';
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
