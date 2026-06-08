@@ -316,9 +316,9 @@ function App() {
 
               <div className="success-icon" style={{marginTop: '20px'}}>🎉</div>
               <div className="success-message">
-                <strong>ĐĂNG KÝ THÀNH CÔNG!</strong><br/><br/>
-                Sau khi phụ huynh đăng ký và đóng phí đi trại, xin quý phụ huynh liên hệ Zalo số điện thoại <strong>0985287664</strong> để nhận thông tin chi tiết.<br/><br/>
-                Xin cảm ơn quý phụ huynh!
+                <strong>XÁC NHẬN ĐĂNG KÝ THÀNH CÔNG!</strong><br/><br/>
+                Sau khi phụ huynh hoàn tất chuyển khoản, vui lòng liên hệ Zalo Trường Tuấn – <strong>0985 287 664</strong> và gửi hình chụp giao dịch chuyển khoản để được xác nhận đăng ký thành công.<br/><br/>
+                Xin chân thành cảm ơn quý phụ huynh!
               </div>
             </div>
           )}
